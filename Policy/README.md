@@ -20,6 +20,8 @@ This Quick Start Challenge is intended for people who are familiar with Azure.
 ### Copy script
 To easily follow the steps from this lab, run the following lines in a PowerShell session to download and open the script containing all the referenced cmdlets.
 
+> The command below uses the tick (`) in order to break a PowerShell command into multiple lines for the sake of printing. It is very important that the line break occur immediately after the tick and that there are no empty lines between the tick and the next section of the command to execute. If you are pasting this or other commands into PowerShell and getting errors, try pasting them into notepad first and cleaning up the result so that it matches the structure below. Then paste that into PowerShell.
+
 ``` PowerShell
 Invoke-RestMethod https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/policy.ps1 ` 
 -OutFile c:\temp\policy.ps1
