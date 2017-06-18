@@ -17,10 +17,12 @@ Azure Stack allows you to bring the fast-paced innovations of cloud computing to
 ### Intended Audience
 This Quick Start Challenge is intended for people who are familiar with Azure.
 
-> To easily follow the steps from this lab, run the following lines in a PowerShell session to download and open the script containing all the referenced cmdlets.
+### Copy script
+To easily follow the steps from this lab, run the following lines in a PowerShell session to download and open the script containing all the referenced cmdlets.
 
 ``` PowerShell
-Invoke-RestMethod https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/policy.ps1 -OutFile c:\temp\policy.ps1
+Invoke-RestMethod https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/policy.ps1 ` 
+-OutFile c:\temp\policy.ps1
 PowerShell_ISE –file c:\temp\policy.ps1
 ```
 
