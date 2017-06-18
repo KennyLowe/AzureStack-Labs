@@ -29,14 +29,14 @@ PowerShell_ISE –file c:\temp\policy.ps1
 ## Task 1: Create an Azure resource group and deploy and ARM template
 1. Open a PowerShell session and login to your Azure subscription by running the following command. Execute the command below to sign in to your Azure account. Sign in when prompted.
 
-``` PowerShell
-    Login-AzureRmAccount
+    ``` PowerShell
+Login-AzureRmAccount
 ```
 
 2. In order to create a resource group, you’ll need to specify a subscription ID. Execute the command below to get a list of subscriptions associated with your account.
 
 ``` PowerShell
-    Get-AzureRmSubscription
+Get-AzureRmSubscription
 ```
 
 > Make note of the name of the Azure subscription you would like to use for this lab.
