@@ -6,9 +6,10 @@ Azure Stack allows you to bring the fast-paced innovations of cloud computing to
 
 ### Objectives	
 
-- Create an Azure resource group and deploy and Azure Resource Manager template
+- Create an Azure resource group and deploy and Azure Resource Manager template.
 - Use the Azure Stack Policy module to constrain the resource group.
 - Test the limits of the constrained resource group.
+- Update the template for Azure Stack.
 
 ### Prerequisites
 - Windows 10 with the Azure PowerShell module installed
