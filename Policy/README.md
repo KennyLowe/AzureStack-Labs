@@ -130,7 +130,8 @@ Write-Host $_.Exception.Message -ForegroundColor Red
 
 ``` PowerShell
 $localTemplate = "c:\temp\azuredeploy.json"
-Invoke-RestMethod https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/azuredeploy.json -OutFile $localTemplate
+Invoke-RestMethod https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/azuredeploy.json `
+-OutFile $localTemplate
 ```
 
 2. Open c:\temp\azuredeploy.json in Visual Studio. Locate the line with Standard_GRS (around line 7). This setting (geo-redundant storage) is not available in Azure Stack, so the policy rejected it. Change it to "Standard_LRS" (locally-redundant storage) and save the file.
