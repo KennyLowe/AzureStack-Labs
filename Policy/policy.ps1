@@ -7,12 +7,12 @@ $resourceGroup = New-AzureRmResourceGroup -Name "AzureStack" -Location "West US"
 $resourceGroupName = $resourceGroup.ResourceGroupName
 
 # Deploy ARM Template
-New-AzureRmResourceGroupDeployment -Name "AzureOnly" -ResourceGroupName $rgName -TemplateUri https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/azuredeploy.json -Verbose
+New-AzureRmResourceGroupDeployment -Name "AzureOnly" -ResourceGroupName $resourceGroupName -TemplateUri https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/azuredeploy.json -Verbose
 
 # Download Azure Stack Tools
 Invoke-WebRequest https://github.com/Azure/AzureStack-Tools/archive/master.zip -OutFile master.zip
-Expand-Archive master.zip -DestinationPath \. -Force
-cd \AzureStack-Tools-master
+Expand-Archive master.zip -DestinationPath c:\ -Force
+cd c:\AzureStack-Tools-master
 
 # Import policy module
 import-module .\Policy\AzureStack.Policy.psm1
