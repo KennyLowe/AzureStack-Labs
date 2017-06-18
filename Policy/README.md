@@ -78,8 +78,7 @@ PowerShell_ISE –file c:\temp\policy.ps1
 1. AzureStack-Tools is a GitHub repository that hosts PowerShell modules and scripts that you can use to manage and deploy resources to Azure Stack. Execute the commands below to download and extract the tools to C:\AzureStack-Tools-master.
 
     ``` PowerShell
-    invoke-webrequest https://github.com/Azure/AzureStack-Tools/archive/master.zip `
-        -OutFile master.zip
+    invoke-webrequest https://github.com/Azure/AzureStack-Tools/archive/master.zip -OutFile master.zip
     expand-archive master.zip -DestinationPath c:\ -Force
     ```
 
@@ -98,15 +97,13 @@ PowerShell_ISE –file c:\temp\policy.ps1
 4. Execute the command below to create a new policy definition based on the default Azure Stack policy.
 
     ``` PowerShell
-    $policy = New-AzureRmPolicyDefinition -Name AzureStackPolicy `
-        -Policy (Get-AzureStackRmPolicy)
+    $policy = New-AzureRmPolicyDefinition -Name AzureStackPolicy -Policy (Get-AzureStackRmPolicy)
     ```
 
 5. Execute the commands below to assign the newly created policy to the resource group. Now deployments will be restricted based on what Azure Stack supports.
 
     ``` PowerShell
-    New-AzureRmPolicyAssignment -Name AzureStackPolicy -PolicyDefinition $policy `
-    -Scope $ResourceGroup.ResourceId
+    New-AzureRmPolicyAssignment -Name AzureStackPolicy -PolicyDefinition $policy -Scope $ResourceGroup.ResourceId
     ```
 
 ## Task 3: Test the limits of the constrained resource group
