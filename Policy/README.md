@@ -114,7 +114,7 @@ New-AzureRmPolicyAssignment -Name AzureStackPolicy -PolicyDefinition $policy `
 
 ``` PowerShell
 Try {
-New-AzureRmResourceGroupDeployment -Name "TemplateDeployPSH" `
+New-AzureRmResourceGroupDeployment -Name "Policy" `
     -ResourceGroupName $resourceGroup.ResourceGroupName `
     -TemplateUri https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/azuredeploy.json `
     -Verbose -ErrorAction Stop
@@ -140,7 +140,7 @@ Invoke-RestMethod https://raw.githubusercontent.com/Azure/AzureStack-Labs/master
 
 ``` PowerShell
 Try {
-New-AzureRmResourceGroupDeployment -Name "TemplateDeployPSH" `
+New-AzureRmResourceGroupDeployment -Name "Fixed" `
     -ResourceGroupName $resourceGroup.ResourceGroupName `
     -TemplateFile $localTemplate `
     -Verbose -ErrorAction Stop
