@@ -30,7 +30,7 @@ PowerShell_ISE –file c:\temp\policy.ps1
 1. Open a PowerShell session and login to your Azure subscription by running the following command. Execute the command below to sign in to your Azure account. Sign in when prompted.
 
 ``` PowerShell
- Login-AzureRmAccount
+    Login-AzureRmAccount
 ```
 
 2. In order to create a resource group, you’ll need to specify a subscription ID. Execute the command below to get a list of subscriptions associated with your account.
