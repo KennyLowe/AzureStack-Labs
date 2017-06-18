@@ -42,6 +42,8 @@ PowerShell_ISE –file c:\temp\policy.ps1
     ```
 
     > Make note of the name of the Azure subscription you would like to use for this lab.
+    
+    ![subscription name](/Policy/images/subscriptionName.png)
  
 3. Execute the command below to select the target subscription into context. All future commands will be executed against this newly selected subscription. Be sure to insert the name of your subscription where specified.
 
