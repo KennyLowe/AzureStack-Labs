@@ -36,7 +36,7 @@ PowerShell_ISE –file c:\temp\policy.ps1
 2. In order to create a resource group, you’ll need to specify a subscription ID. Execute the command below to get a list of subscriptions associated with your account.
 
 ``` PowerShell
-Get-AzureRmSubscription
+    Get-AzureRmSubscription
 ```
 
 > Make note of the name of the Azure subscription you would like to use for this lab.
