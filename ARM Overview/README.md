@@ -37,9 +37,11 @@ variables | | Values that are used as JSON fragments in the template to simplify
 resources | ✓ | Resource types that are deployed or updated in a resource group.
 outputs | | Values that are returned after deployment.
 
-Conventionally, the first single word in an attribute name is specified in lowercase while additional words are appended to the first word without spaces and start with an Uppercase (e.g. contentVersion). This convention is commonly referred to as “Camel case”.
-Adding resources to your template
-For the example we will use in this whitepaper, a storage account is the first resource that will be added to the template. The code blocks in this whitepaper will only contains the changes to our code and not the complete template. This will help to emphasize the differences in each step.
+# Adding resources to your template
+
+For this lab a storage account is the first resource that will be added to the template. Add the following code to the resources element.
+
+``` JSON
 "resources": [
 	{
 		"name": "myStorageAccount",
@@ -51,6 +53,8 @@ For the example we will use in this whitepaper, a storage account is the first r
 		}
 	}
 ],
+```
+
 Within the resources array we added a new object with an open and closing curly bracket. Within that object the common attributes (name, type, apiVersion, location and properties) are specified. The value of the properties attribute is enclosed in curly brackets, indicating that the value allows for multiple different child attributes. This template deploys a storage account configured with the type set to the Local Redundant Storage option in the East US region. 
 All resource types require some common attributes like "name" and "type". Azure Resource Manager uses these attributes to ensure that the correct resource provider is handling the request. The following common attributes are required across all resources.
 •	name is used to name the deployed resource. Each resource of the same resource type within a single resource group must be uniquely named. Depending on the resource type it may also require uniqueness at either subscription, tenant or global scopes.
