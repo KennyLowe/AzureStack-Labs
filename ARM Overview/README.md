@@ -1,6 +1,7 @@
 # Azure Stack Labs - ARM Overview
 
-Template authoring
+### Template authoring
+
 An application consists of different building blocks. A virtual machine is not a single resource but contains different individual resources like a virtual hard disk and a virtual network interface card. These resources can depend on other resources or can have other resources depending on it. This decomposed model allows an application to be constructed completely to your needs. Before you start creating your template it is a good idea to create a graphical design of your application first. You can think of the graphical design like an index of a book. The graphical design helps you to understand the required resources and the dependencies of between these resources. 
  
 A SQL DB instance is created for a Web App and Virtual Machines that depend on it. The connection details (SQL CONFIG) configures the WebApp to connect to the SQL database. Beyond the resources shown in the diagram, each virtual machine requires a location to store its disks and contains a virtual network interface card that requires a network for connectivity. An application within the virtual machine is configured with the use of a VM extension resource, which will be explained in more detail in the adding additional resources section in this whitepaper.
