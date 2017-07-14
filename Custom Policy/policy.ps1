@@ -17,7 +17,7 @@ $resourceGroupName = $resourceGroup.ResourceGroupName
 Try {
 New-AzureRmResourceGroupDeployment -Name "NoPolicy" `
     -ResourceGroupName $resourceGroupName `
-    -TemplateUri https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/azuredeploy.json `
+        -TemplateUri "https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Custom%20Policy/azuredeploy.json" `
     -Verbose -ErrorAction Stop
 }
 Catch {
@@ -35,7 +35,7 @@ cd \AzureStack-Tools-master
 import-module .\Policy\AzureStack.Policy.psm1
 
 # Create a new policy
-$policy = New-AzureRmPolicyDefinition -Name AzureStackPolicy -Policy (Get-AzureStackRmPolicy)
+$policy = New-AzureRmPolicyDefinition -Name AzureStackPolicy -Policy (Get-AzSPolicy)
 
 # Assign the new policy to the resource group
 New-AzureRmPolicyAssignment -Name AzureStackPolicy -PolicyDefinition $policy -Scope $ResourceGroup.ResourceId
