@@ -30,9 +30,8 @@ In these steps, you validate a template by using the AzureRM.TemplateValidator P
 
 5.  Notice the warnings issued.  You will see the APIVersion and Storage Type is not supported.
 
-
-
 - [x] 1. [ARM Overview](/ARM%20Overview/README.md)
 - [x] 2. [Configure Tools](/Configure%20Tools/README.md)
 - [x] 3. [Custom Policy](/Custom%20Policy/README.md)
 - [x] 4. [Validate Templates](/Validate%20Templates/README.md)
+
