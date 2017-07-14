@@ -69,3 +69,4 @@ New-AzureRmResourceGroupDeployment -Name "Fixed" `
 Catch {
 Write-Host $_.Exception.Message -ForegroundColor Red
 }
+
