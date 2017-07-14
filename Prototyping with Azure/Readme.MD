@@ -31,8 +31,9 @@ You'll install Visual Stode Code, and the Azure Resource Manager Tools extension
 2. Once installed, select "Extensions":
 
     ![image1](./images/image1.png)
-3. Search for "Azure Resource Manager Tools" and select "Install"
+3. Search for "Azure Resource Manager Tools" and select "Install":
 
+    ![image2](./images/image2.png)
 
 #### Install PowerShell
 
