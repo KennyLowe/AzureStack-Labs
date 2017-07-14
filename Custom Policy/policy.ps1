@@ -46,7 +46,7 @@ New-AzureRmPolicyAssignment -Name AzureStackPolicy -PolicyDefinition $policy -Sc
 Try {
 New-AzureRmResourceGroupDeployment -Name "Policy" `
     -ResourceGroupName $resourceGroup.ResourceGroupName `
-    -TemplateUri https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/azuredeploy.json `
+        -TemplateUri "https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Custom%20Policy/azuredeploy.json" `
     -Verbose -ErrorAction Stop
 }
 Catch {
@@ -56,8 +56,8 @@ Write-Host $_.Exception.Message -ForegroundColor Red
 ### Task 4: Update the template for Azure Stack ###
 
 # Download a local copy of the ARM Template for updating
-$localTemplate = "c:\temp\azuredeploy.json"
-Invoke-RestMethod https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/azuredeploy.json -OutFile $localTemplate
+$localTemplate = "c:\AzureStack_Labs\CustomPolicy\azuredeploy.json"
+Invoke-RestMethod "https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Custom%20Policy/azuredeploy.json" -OutFile $localTemplate
 
 # Deploy the ARM Template after updating
 Try {
