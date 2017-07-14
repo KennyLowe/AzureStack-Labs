@@ -27,7 +27,7 @@ This lab is intended for people who are familiar with Azure.
 
 1. ARM overview
 2. Configure tools
-3. [Custom Policy](/Custom Policy/README.md)
+3. [Custom Policy](/Custom%20Policy/README.md)
 4. Validate templates
 
 ## Contributing
