@@ -1,4 +1,4 @@
 ## Azure Stack Labs - ARM Overview
 
 #
-Back to [Index](/AzureStack-Labs#labs)
+Back to [Index](/blob/master/README.md#labs)
