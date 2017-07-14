@@ -29,7 +29,8 @@ Set-PSRepository `
 Set-ExecutionPolicy RemoteSigned `
   -force
 
-# Uninstall any existing Azure PowerShell modules. To uninstall, close all the active PowerShell sessions and run the following command:
+# Uninstall any existing Azure PowerShell modules. 
+# To uninstall, close all the active PowerShell sessions and run the following command:
 Get-Module -ListAvailable | `
   where-Object {$_.Name -like “Azure*”} | `
   Uninstall-Module
