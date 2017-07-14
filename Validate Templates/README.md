@@ -14,7 +14,7 @@ Invoke-RestMethod "https://raw.githubusercontent.com/Azure/AzureStack-Labs/maste
 PowerShell_ISE –file c:\AzureStack_Labs\ValidateTemplates\validate.ps1
 ```
 
-## Task 1:  Validate templates
+## Task 1:  Validate template
 In these steps, you validate a template by using the AzureRM.TemplateValidator PowerShell module.  This tool will identify common template inconsistencies that must be addressed for template portability between Azure and Azure Stack. You will use the same template from the previous step, and will see the same changes highlighted.   
 
 1. Download the Azure Resource Manager template with this PowerShell:
@@ -28,20 +28,21 @@ In these steps, you validate a template by using the AzureRM.TemplateValidator P
     
     ```PowerShell
     cd \AzureStack-Tools-master\TemplateValidator
-    import-module .\TemplateValidator\AzureRM.TemplateValidator.psm1
+    import-module .\AzureRM.TemplateValidator.psm1
     ```
 
 3.  Run the template validator:
 
     ```PowerShell
-    Test-AzureRMTemplate -TemplatePath c:\AzureStack_Labs\ValidateTemplates\azuredeploy.json`
+    Test-AzureRMTemplate -TemplatePath c:\AzureStack_Labs\ValidateTemplates\azuredeploy.json `
     -CapabilitiesPath AzureStackCloudCapabilities_with_AddOns_20170627.json `
+    -IncludeStorageCapabilities `
     -Verbose
     ```
 
-4.  Open the HTML report from c:\AzureStack_Labs.
+4.  Open the HTML report from [C:\AzureStack-Tools-master\TemplateValidator\TemplateValidationReport.html](file:///C:/AzureStack-Tools-master/TemplateValidator/TemplateValidationReport.html.
 
-5.  Notice the warnings issued.  You will see the APIVersion and Storage Type is not supported.
+ ![screenshot of output](./images/image1.png)  
 
 - [x] 1. [ARM Overview](/ARM%20Overview/README.md)
 - [x] 2. [Configure Tools](/Configure%20Tools/README.md)
