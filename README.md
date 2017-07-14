@@ -18,16 +18,16 @@ Azure Stack allows you to bring the fast-paced innovations of cloud computing to
 - Windows 10
 - Azure subscription (Sign up for a free account here. Needs a Microsoft account)
 
-### Intended Audience
+### Intended audience
 
 This lab is intended for people who are familiar with Azure.
 
 ## Labs
 
-- [ ] 1. [ARM Overview](/ARM%20Overview/README.md)
-- [ ] 2. [Configure Tools](/Configure%20Tools/README.md)
-- [ ] 3. [Custom Policy](/Custom%20Policy/README.md)
-- [ ] 4. [Validate Templates](/Validate%20Templates/README.md)
+- [ ] 1. [Azure Resource Manager overview](/ARM%20Overview/README.md)
+- [ ] 2. [Configure tools](/Configure%20Tools/README.md)
+- [ ] 3. [Custom policy](/Custom%20Policy/README.md)
+- [ ] 4. [Validate templates](/Validate%20Templates/README.md)
 
 ## Contributing
 
