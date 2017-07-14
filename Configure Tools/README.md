@@ -9,7 +9,7 @@ You'll install Visual Stode Code, and the Azure Resource Manager Tools extension
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/Download).  Accept the installation defaults, except enable "Register Code as an editor for supported file types".
 
-  ![image3](./images/image3.png)
+    ![image3](./images/image3.png)
 
 2. Once installed, select "Extensions":
 
