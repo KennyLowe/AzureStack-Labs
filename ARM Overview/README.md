@@ -10,7 +10,7 @@ Infrastructure as Code allows you to define the desired state of your applicatio
 
 An application consists of different building blocks. A virtual machine is not a single resource but contains different individual resources like a virtual hard disk and a virtual network interface card. These resources can depend on other resources or can have other resources depending on it. This decomposed model allows an application to be constructed completely to your needs. Before you start creating your template it is a good idea to create a graphical design of your application first. You can think of the graphical design like an index of a book. The graphical design helps you to understand the required resources and the dependencies of between these resources. 
 
-### Language
+## Task 1 : Create minimal Template
 Azure Resource Manager accepts JavaScript Object Notation (JSON) templates that comply with a JSON schema. JSON is an industry standard, human readable language. 
 
 You can follow along in this Lab as we build a simple template. Create a new template file called azuredeploy.json. Copy and paste the following code, that contains all the top level elements, in to the file.
@@ -37,7 +37,7 @@ variables | | Values that are used as JSON fragments in the template to simplify
 resources | ✓ | Resource types that are deployed or updated in a resource group.
 outputs | | Values that are returned after deployment.
 
-# Adding resources to your template
+## Task 2 : Adding resources to your template
 
 For this lab a storage account is the first resource that will be added to the template. Add the following code to the resources element.
 
@@ -66,9 +66,9 @@ All resource types require some common attributes like "name" and "type". Azure 
 
 Besides these required common attributes, each different resource can have optional common attributes like tags or comments and will have properties that are resource specific. For example, a storage account requires a replication policy while a virtual network requires a subnet. Resource specific properties are configured in the properties attribute.
 
-### Adding parameters to your template
+## Task 3 : Adding parameters to your template
 
-Consistency of Azure Resource Manager across clouds allows the template to be used for different environments. A scaled down version of your application can be sufficient for a test environment, while a production environment requires a more robust version. Depending on the desired end state, specific options might require other settings. For the example in this whitepaper, you may want to use a different replication mechanism for the storage account when the template is deployed to a different environment. This can be achieved by specifying parameters. The values for these parameters are requested from the tenant when a template is deployed. The values for the parameters can be passed to the template deployment in different ways. 
+Consistency of Azure Resource Manager across clouds allows the template to be used for different environments. A scaled down version of your application can be sufficient for a test environment, while a production environment requires a more robust version. Depending on the desired end state, specific options might require other settings. For example, you may want to use a different replication mechanism for the storage account when the template is deployed to a different environment. This can be achieved by specifying parameters. The values for these parameters are requested from the tenant when a template is deployed. The values for the parameters can be passed to the template deployment in different ways. 
 
 ``` JSON
 "parameters": {
@@ -104,7 +104,7 @@ While the parameter has been specified, the parameter is not used in the resourc
 
 By adding a parameter to your template and replacing the fixed value in a resource with that parameter, the template is now more dynamic. While the concept of replacing fixed values by parameters is applicable throughout the template, just be aware of the effect that a larger number of parameters can have on the deployment experience. If a tenant is asked to submit many values for deploy a template, the experience will not be very user friendly. The deployment experience can be improved by specifying a default value where possible and minimize the number of parameters overall. Combining parameters with variables can also improve the experience while retaining the dynamic nature of a template.
 
-### Adding variables to your template
+## Task 4 : Adding variables to your template
 
 Where parameters are used to request a value from the tenant at deployment time, a variable is a value that can be reused throughout the template without requiring user input. For example, a storage account resource can be used by a virtual machine resource to store its virtual disks. The virtual machine resource will need to reference the storage account resource name in its configuration.
 You could specify the name for the storage account as a static value for both the storage account resource and the virtual machine resource. This is problematic as the name can be potentially changed in one location and not the other. Instead, it is much easier to create a single variable that is referenced by all the relevant resources.
@@ -131,7 +131,7 @@ The variable can be referenced using the function: variables('variableName'). Th
 ],
 ```
 
-### Template functions
+## Task 5 : Template functions
 
 Azure Resource Manager provides template functions that make the template orchestration engine very powerful. Template functions enable operations on values within the template at deployment time. A simple example of a template function is to concatenate two strings into a single string. You could use a function that concatenate strings and pass in the two strings as parameters to the functions.
 Template functions can be used in variables, resources and outputs in Azure Resource Manager templates. Template functions can reference parameters, other variables or even objects related to the deployment. For example, a template function can reference the ID of the resource group.
@@ -140,7 +140,7 @@ https://azure.microsoft.com/en-us/documentation/articles/resource-group-template
 
 ### Common examples of template function usage
 
-The example we used in this whitepaper currently contains a variable for the storage account name. This variable is set to the value "myStorageAccountName". Besides other requirements, a storage account requires a globally unique fully-qualified domain name (FQDN). After you create the storage account, this domain is used to allow you to access your storage resources using a URL. In our example, the chance that the name myStorageAccountName is not used yet is very small. If we try to deploy a storage account with that name, the deployment will likely fail. The best practice for a storage account name is to use a variable that generates a unique name. To accomplish this, we can concatenate a unique string to the text ‘storage’. This can be achieved by using the concat(), resourceGroup() and uniqueString() template functions. 
+The example currently contains a variable for the storage account name. This variable is set to the value "myStorageAccountName". Besides other requirements, a storage account requires a globally unique fully-qualified domain name (FQDN). After you create the storage account, this domain is used to allow you to access your storage resources using a URL. In our example, the chance that the name myStorageAccountName is not used yet is very small. If we try to deploy a storage account with that name, the deployment will likely fail. The best practice for a storage account name is to use a variable that generates a unique name. To accomplish this, we can concatenate a unique string to the text ‘storage’. This can be achieved by using the concat(), resourceGroup() and uniqueString() template functions. 
 
 The storage account name is generated by concatenating a unique string that is derived from the id of the resource group that the template is being deployed to and the string 'storage'. Because the storage account resource already references the variable for the storageAccountName, the resource itself does not require a change to reflect the new value of the variable. 
 
@@ -164,7 +164,9 @@ Although we have created a parameter for the storageAccountType, each time the t
 ],
 ```
 Some applications can require a distributed setup across regions. In these cases, create a single variable for the deviating location and reference that variable for the resources that require placement in region other than the resource group.
-Adding outputs to your template
+
+## Task 6 : Adding outputs to your template
+
 A template can also contain outputs. The outputs and their values are displayed and recorded when the deployment is finished. Outputs can be useful to display properties of a deployed resource (e.g. the FQDN of a web server). Each output requires a type (string, int, bool, array, object, secureString) and can contain template functions, parameters and variables.
 
 ```JSON
