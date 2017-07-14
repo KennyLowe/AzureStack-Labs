@@ -1,6 +1,10 @@
 # Azure Stack Labs - Validate Templates
 
-## Validate templates
+### Objective	
+
+- Configure common development tools for Azure and Azure Stack.
+
+## Task 1:  Validate templates
 In these steps, you validate a template by using the AzureRM.TemplateValidator PowerShell module.  This tool will identify common template inconsistencies that must be addressed for template portability between Azure and Azure Stack. You will use the same template that previously failed, and will see the same changes highlighted.   
 
 1. Download the Azure Resource Manager template with this PowerShell:

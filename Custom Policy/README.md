@@ -2,8 +2,6 @@
 
 ### Overview
 
-In this quickstart challenge, you'll be using the Azure Stack policy module to simulate an Azure Stack environment by placing resource group constraints on the full-blown Azure cloud. As a result, you can develop using all of the tools and availability of the full Azure cloud with the confidence that your investment will apply to Azure Stack as well.
-
 ### Objectives	
 
 - Create an Azure resource group and deploy and Azure Resource Manager template.
@@ -12,7 +10,8 @@ In this quickstart challenge, you'll be using the Azure Stack policy module to s
 - Update the template for Azure Stack.
 
 ### Copy script
-To easily follow the steps from this lab, run the following lines in a PowerShell session to download and open the script containing all the referenced cmdlets.
+To follow the steps from this lab, run the following lines in a PowerShell session:
+
 
 ``` PowerShell
 Invoke-RestMethod https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/policy.ps1 ` 
@@ -155,7 +154,7 @@ It should not fail this time. It may take a minute for the creation to complete.
     
 ## Summary
 
-Congratulations on completing this Quick Start Challenge! In this lab, you’ve learned how to use the Azure Stack Policy module to constrain an Azure resource group to the capabilities available in Azure Stack. Proceed to the next Lab.
+In this lab, you’ve learned how to use the Azure Stack Policy module to constrain an Azure resource group to the capabilities available in Azure Stack. Proceed to the next lab.
  
 - [x] 1. [ARM Overview](/ARM%20Overview/README.md)
 - [x] 2. [Configure Tools](/Configure%20Tools/README.md)
