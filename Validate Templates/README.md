@@ -17,21 +17,28 @@ PowerShell_ISE –file c:\AzureStack_Labs\ValidateTemplates\validate.ps1
 ## Task 1:  Validate template
 In these steps, you validate a template by using the AzureRM.TemplateValidator PowerShell module.  This tool will identify common template inconsistencies that must be addressed for template portability between Azure and Azure Stack. You will use the same template from the previous step, and will see the same changes highlighted.   
 
-1. Download the Azure Resource Manager template with this PowerShell:
+1. AzureStack-Tools is a GitHub repository that hosts PowerShell modules and scripts that you can use to manage and deploy resources to Azure Stack. Execute the commands below to download and extract the tools to C:\AzureStack-Tools-master.
+
+    ``` PowerShell
+    invoke-webrequest https://github.com/Azure/AzureStack-Tools/archive/master.zip -OutFile master.zip
+    expand-archive master.zip -DestinationPath c:\ -Force
+    ```
+
+2. Download the Azure Resource Manager template with this PowerShell:
 
 ```PowerShell
     Invoke-WebRequest -uri "https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Validate%20Templates/azuredeploy.json" `
     -OutFile c:\AzureStack_Labs\ValidateTemplates\azuredeploy.json
 ```
 
-2.  Import the AzureRM.TemplateValidator.psm1 PowerShell module:
+3.  Import the AzureRM.TemplateValidator.psm1 PowerShell module:
     
     ```PowerShell
     cd \AzureStack-Tools-master\TemplateValidator
     import-module .\AzureRM.TemplateValidator.psm1
     ```
 
-3.  Run the template validator:
+4.  Run the template validator:
 
     ```PowerShell
     Test-AzureRMTemplate -TemplatePath c:\AzureStack_Labs\ValidateTemplates\azuredeploy.json `
@@ -40,7 +47,7 @@ In these steps, you validate a template by using the AzureRM.TemplateValidator P
     -Verbose
     ```
 
-4.  Open the HTML report from *C:\AzureStack-Tools-master\TemplateValidator\TemplateValidationReport.html*.
+5.  Open the HTML report from *C:\AzureStack-Tools-master\TemplateValidator\TemplateValidationReport.html*.
 
     ![screenshot of output](./images/image1.png)  
 
