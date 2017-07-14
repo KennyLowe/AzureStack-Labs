@@ -27,13 +27,14 @@ You can follow along in this Lab as we build a simple template. Create a new tem
 ```
 
 An Azure Resource Manager template uses 6 top level elements. Each element has a distinct role in the template.
-ELEMENT	REQUIRED	DESCRIPTION
-$schema	✓	Location of the JSON schema file that describes the version of the template language. You should use the standard URL: https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#
-contentVersion	✓	Version of the template (such as 1.0.0.0). You can provide any value for this element. When deploying resources using the template, this value can be used to make sure that the right template is being used.
-parameters		Values that are provided when deployment is executed to customize resource deployment.
-variables		Values that are used as JSON fragments in the template to simplify template language expressions.
-resources	✓	Resource types that are deployed or updated in a resource group.
-outputs		Values that are returned after deployment.
+ELEMENT	| REQUIRED | DESCRIPTION
+--- | --- | ---
+$schema | ✓ |Location of the JSON schema file that describes the version of the template language. You should use the standard URL: https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#
+contentVersion | ✓ | Version of the template (such as 1.0.0.0). You can provide any value for this element. When deploying resources using the template, this value can be used to make sure that the right template is being used.
+parameters| --- | Values that are provided when deployment is executed to customize resource deployment.
+variables | --- | Values that are used as JSON fragments in the template to simplify template language expressions.
+resources | ✓ | Resource types that are deployed or updated in a resource group.
+outputs | --- | Values that are returned after deployment.
 
 Conventionally, the first single word in an attribute name is specified in lowercase while additional words are appended to the first word without spaces and start with an Uppercase (e.g. contentVersion). This convention is commonly referred to as “Camel case”.
 Adding resources to your template
