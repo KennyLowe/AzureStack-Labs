@@ -4,10 +4,6 @@
 
 - Configure common development tools for Azure and Azure Stack.
 
-### Prerequisites
-- Windows 10 with the Azure PowerShell module installed
-- Azure subscription (Sign up for a free account here. Needs a Microsoft account)
-
 #### Task 1: Install Visual Studio Code and extension
 You'll install Visual Stode Code, and the Azure Resource Manager Tools extension to work with Azure Resource Manager templates.
 
@@ -20,7 +16,7 @@ You'll install Visual Stode Code, and the Azure Resource Manager Tools extension
     ![image2](./images/image2.png)
 
 #### Task 2: Install PowerShell
-Azure Resource Manager PowerShell is used to manage Azure Resources using a familliar language.  In this step, you'll install PowerShell, and download the Azure Stack tools. 
+Azure Resource Manager PowerShell is used to manage Azure Resources.  In this step, you'll install PowerShell, and download the Azure Stack tools. 
 
 Open an administrative PowerShell ISE session, and run the following:
 
