@@ -83,7 +83,7 @@ cd AzureStack-Tools-master
 ```
 
 
-### Download lab files
+### Download the lab files
 In the same PowerShell session, you'll download additional files required for this lab:
 
 ```PowerShell
@@ -97,6 +97,7 @@ expand-archive master.zip `
 
 cd AzureStack-Labs-master
 
+```
 ## Task 1: Explore the Azure Resource Manager template
 ### Sub Task 1:  Explore resource types
 <Look at storage>
