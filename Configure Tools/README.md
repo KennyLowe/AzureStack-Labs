@@ -67,7 +67,10 @@ expand-archive master.zip `
 
 cd AzureStack-Tools-master
 ```
- 
+
+## For more information
+Be sure to check out the official documentation on [installing PowerShell for Azure Stack](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-powershell-install).
+
 ## Summary
 
 In this module, you configured Visual Studio Code and PowerShell for Azure and Azure Stack, which you will use in future modules.
