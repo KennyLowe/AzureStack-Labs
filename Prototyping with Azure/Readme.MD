@@ -29,7 +29,8 @@ You'll install Visual Stode Code, and the Azure Resource Manager Tools extension
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/Download).
 2. Once installed, select "Extensions":
-    ![image1](./media/image1.png)
+
+    ![image1](./images/image1.png)
 3. Search for "Azure Resource Manager Tools" and select "Install"
 
 
