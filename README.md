@@ -15,7 +15,7 @@ Azure Stack allows you to bring the fast-paced innovations of cloud computing to
 
 ### Prerequisites
 
-- Windows 10 with the Azure PowerShell module installed
+- Windows 10
 - Azure subscription (Sign up for a free account here. Needs a Microsoft account)
 
 ### Intended Audience
