@@ -36,7 +36,7 @@ PowerShell_ISE –file c:\temp\policy.ps1
 
     > Make note of the name of the Azure subscription you would like to use for this lab.
 
-    ![subscription name](/Policy/images/subscriptionName.png)
+    ![subscription name](./images/subscriptionName.png)
  
 3. Execute the command below to select the target subscription into context. All future commands will be executed against this newly selected subscription. Be sure to insert the name of your subscription where specified.
 
@@ -119,7 +119,7 @@ PowerShell_ISE –file c:\temp\policy.ps1
     ```
 2.	The failure should happen almost immediately. Note that it specifies that something associated with the storage account creation defies the assigned policy.
 
-    ![subscription name](/Policy/images/policyError.png)
+    ![subscription name](./images/policyError.png)
  
 ## Task 4: Update the template for Azure Stack
 1.	Donwload a copy of the ARM template.
@@ -132,11 +132,11 @@ PowerShell_ISE –file c:\temp\policy.ps1
 
 2. Open c:\temp\azuredeploy.json in Visual Studio. Locate the line with Standard_GRS (around line 7). This setting (geo-redundant storage) is not available in Azure Stack, so the policy rejected it. Change it to "Standard_LRS" (locally-redundant storage) and save the file.
 
-    ![subscription name](/Policy/images/changeTemplate.png)
+    ![subscription name](./images/changeTemplate.png)
  
 3. Return to PowerShell and execute the deployment again. 
 
-    ``` PowerShell
+    ```PowerShell
     Try {
     New-AzureRmResourceGroupDeployment -Name "Fixed" `
         -ResourceGroupName $resourceGroup.ResourceGroupName `
@@ -147,11 +147,11 @@ PowerShell_ISE –file c:\temp\policy.ps1
     Write-Host $_.Exception.Message -ForegroundColor Red
     }
     ```
-
+    
 It should not fail this time. It may take a minute for the creation to complete. You now have a deployment up and running in Azure based on a template that will also work in your Azure Stack deployment.
 
-    ![subscription name](/Policy/images/deploy.png)
-    
+![subscription](./images/deploy.png)
+        
 ## Summary
 
 In this lab, you’ve learned how to use the Azure Stack Policy module to constrain an Azure resource group to the capabilities available in Azure Stack. Proceed to the next lab.
