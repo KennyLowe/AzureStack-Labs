@@ -66,7 +66,6 @@ cd AzureStack-Tools-master
 
 In this module, you configured Visual Studio Code and PowerShell for Azure and Azure Stack, which you will use in future modules.
 
-
 - [x] 1. [ARM Overview](/ARM%20Overview/README.md)
 - [x] 2. [Configure Tools](/Configure%20Tools/README.md)
 - [ ] 3. [Custom Policy](/Custom%20Policy/README.md)
