@@ -7,7 +7,9 @@
 #### Task 1: Install Visual Studio Code and extension
 You'll install Visual Stode Code, and the Azure Resource Manager Tools extension to work with Azure Resource Manager templates.
 
-1. Install [Visual Studio Code](https://code.visualstudio.com/Download).
+1. Install [Visual Studio Code](https://code.visualstudio.com/Download).  Accept the installation defaults, except enable "Register Code as an editor for supported file types".
+
+  ![image3](./images/image3.png)
 2. Once installed, select "Extensions":
 
     ![image1](./images/image1.png)
