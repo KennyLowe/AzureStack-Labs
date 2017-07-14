@@ -40,7 +40,7 @@ In these steps, you validate a template by using the AzureRM.TemplateValidator P
     -Verbose
     ```
 
-4.  Open the HTML report from [C:\AzureStack-Tools-master\TemplateValidator\TemplateValidationReport.html](file:///C:/AzureStack-Tools-master/TemplateValidator/TemplateValidationReport.html.
+4.  Open the HTML report from [C:\AzureStack-Tools-master\TemplateValidator\TemplateValidationReport.html](file:///C:/AzureStack-Tools-master/TemplateValidator/TemplateValidationReport.html).
 
     ![screenshot of output](./images/image1.png)  
 
