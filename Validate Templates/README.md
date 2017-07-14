@@ -42,7 +42,10 @@ In these steps, you validate a template by using the AzureRM.TemplateValidator P
 
 4.  Open the HTML report from [C:\AzureStack-Tools-master\TemplateValidator\TemplateValidationReport.html](file:///C:/AzureStack-Tools-master/TemplateValidator/TemplateValidationReport.html.
 
- ![screenshot of output](./images/image1.png)  
+    ![screenshot of output](./images/image1.png)  
+
+## Summary
+You have used the template validator to identify templates which may not be portable to Azure Stack.  
 
 - [x] 1. [ARM Overview](/ARM%20Overview/README.md)
 - [x] 2. [Configure Tools](/Configure%20Tools/README.md)
