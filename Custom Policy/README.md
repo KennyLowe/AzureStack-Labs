@@ -152,15 +152,17 @@ PowerShell_ISE –file c:\temp\policy.ps1
 It should not fail this time. It may take a minute for the creation to complete. You now have a deployment up and running in Azure based on a template that will also work in your Azure Stack deployment.
 
     ![subscription name](/Policy/images/deploy.png)
+    
+## Summary
+
+Congratulations on completing this Quick Start Challenge! In this lab, you’ve learned how to use the Azure Stack Policy module to constrain an Azure resource group to the capabilities available in Azure Stack. Proceed to the next Lab.
  
 - [x] 1. [ARM Overview](/ARM%20Overview/README.md)
 - [x] 2. [Configure Tools](/Configure%20Tools/README.md)
 - [x] 3. [Custom Policy](/Custom%20Policy/README.md)
 - [ ] 4. [Validate Templates](/Validate%20Templates/README.md) 
 
-## Summary
 
-Congratulations on completing this Quick Start Challenge! In this lab, you’ve learned how to use the Azure Stack Policy module to constrain an Azure resource group to the capabilities available in Azure Stack.
 
 ### Additional Resources
 If you are interested in learning more about this topic, you can refer to the following resources:
