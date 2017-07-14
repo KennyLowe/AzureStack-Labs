@@ -34,3 +34,4 @@ In these steps, you validate a template by using the AzureRM.TemplateValidator P
 - [x] 2. [Configure Tools](/Configure%20Tools/README.md)
 - [x] 3. [Custom Policy](/Custom%20Policy/README.md)
 - [x] 4. [Validate Templates](/Validate%20Templates/README.md)
+
