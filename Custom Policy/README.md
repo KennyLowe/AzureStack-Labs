@@ -19,7 +19,7 @@ Invoke-RestMethod https://raw.githubusercontent.com/Azure/AzureStack-Labs/master
 PowerShell_ISE –file c:\temp\policy.ps1
 ```
 
-> The command uses the backtick (`) in order to break a PowerShell command into multiple lines for the sake of printing. It is very important that the line break occur immediately after the tick and that there are no empty lines between the tick and the next section of the command to execute. If you are pasting this or other commands into PowerShell and getting errors, try pasting them into notepad first and cleaning up the result so that it matches the structure below. Then paste that into PowerShell.
+> The command uses the backtick (`) in order to break a PowerShell command into multiple lines for the sake of printing. It is very important that the line break occur immediately after the tick and that there are no empty lines between the tick and the next section of the command to execute. If you are pasting this or other commands into PowerShell and getting errors, try pasting them into notepad first and cleaning up the result so that it matches the structure below, and then paste that into PowerShell.
 
 ## Task 1: Create an Azure resource group and deploy and ARM template
 1. Open a PowerShell session and login to your Azure subscription by running the following command. Execute the command below to sign in to your Azure account. Sign in when prompted.

@@ -8,11 +8,10 @@ Azure Stack allows you to bring the fast-paced innovations of cloud computing to
 
 - Understand Azure Resource Manager templates and versioning.
 - Use Azure Resource Manager version profiles to install PowerShell
-- Create an Azure resource group and deploy and Azure Resource Manager template.
-- Use the Azure Stack Policy module to constrain the resource group.
-- Test the limits of the constrained resource group.
-- Use the Azure Stack template validator to identify versioning incompatibilities
-- Update the template for Azure Stack.
+- Create an Azure resource group and deploy an Azure Resource Manager template.
+- Use the Azure Stack Policy module to constrain the resource group and test the limits of the constrained resource group.
+- Use the Azure Stack template validator to identify versioning incompatibilities.
+- Update templates for Azure Stack.
 
 ### Prerequisites
 
