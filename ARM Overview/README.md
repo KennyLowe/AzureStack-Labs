@@ -1,15 +1,21 @@
 # Azure Stack Labs - ARM Overview
 
+At the core of Microsoft cloud platform, Azure Resource Manager provides a RESTful API that allows the wide variety of user interfaces to communicate with the platform. The capabilities in Azure Resource Manager ensure that the tenant experience is consistent regardless what tool is used. Azure Resource Manager applies a set of policies and features at its core, ensuring all user interfaces can leverage the same capabilities and are restricted by the same policies. 
+
+### Infrastructure as Code
+
+Infrastructure as Code allows you to define the desired state of your application in a template. The template is then used to deploy the application. The template provides the ability to repeat a deployment exactly but it can also ensure that a deployed application stays consistent with the desired state defined in the template over time. If you want to make a change to the application, you would make that change in the template. The template can then be used to apply the desired state to the existing application instance over its complete lifecycle. Templates can be parameterized; creating a reusable artifact that is used to deploy the same application to different environments, accepting the relevant parameters for each environment. 
+
 ### Template authoring
 
 An application consists of different building blocks. A virtual machine is not a single resource but contains different individual resources like a virtual hard disk and a virtual network interface card. These resources can depend on other resources or can have other resources depending on it. This decomposed model allows an application to be constructed completely to your needs. Before you start creating your template it is a good idea to create a graphical design of your application first. You can think of the graphical design like an index of a book. The graphical design helps you to understand the required resources and the dependencies of between these resources. 
- 
-A SQL DB instance is created for a Web App and Virtual Machines that depend on it. The connection details (SQL CONFIG) configures the WebApp to connect to the SQL database. Beyond the resources shown in the diagram, each virtual machine requires a location to store its disks and contains a virtual network interface card that requires a network for connectivity. An application within the virtual machine is configured with the use of a VM extension resource, which will be explained in more detail in the adding additional resources section in this whitepaper.
-You can create a script that calls the Azure Resource Manager REST API to create each resource as an independent action, but you also create a template that describes the final state of your application and the template orchestration will perform the steps to achieve the desired state.
-Language
+
+### Language
 Azure Resource Manager accepts JavaScript Object Notation (JSON) templates that comply with a JSON schema. JSON is an industry standard, human readable language. 
-  http://www.json.org/
-You can follow along in this whitepaper as we build a simple template as the basis for this whitepaper. For our example create a new template file called azuredeploy.json. Copy and paste the following code, that contains all the top level elements, in to the file.
+
+You can follow along in this Lab as we build a simple template. Create a new template file called azuredeploy.json. Copy and paste the following code, that contains all the top level elements, in to the file.
+
+``` JSON
 {
 	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
 	"contentVersion": "1.0.0.0",
@@ -18,6 +24,8 @@ You can follow along in this whitepaper as we build a simple template as the bas
 	"resources": [],
 	"outputs": {}
 }
+```
+
 An Azure Resource Manager template uses 6 top level elements. Each element has a distinct role in the template.
 ELEMENT	REQUIRED	DESCRIPTION
 $schema	✓	Location of the JSON schema file that describes the version of the template language. You should use the standard URL: https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#
