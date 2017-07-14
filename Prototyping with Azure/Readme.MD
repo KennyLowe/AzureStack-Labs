@@ -6,12 +6,12 @@ Azure Stack allows you to bring the fast-paced innovations of cloud computing to
 
 ### Objectives	
 
-- Understand Azure Resource Manager templates and versioning.
-- Use Azure Resource Manager version profiles to install PowerShell
+- Understand Azure Resource Manager templates.
+- Configure common development tools for Azure and Azure Stack.
 - Create an Azure resource group and deploy and Azure Resource Manager template.
 - Use the Azure Stack Policy module to constrain the resource group.
 - Test the limits of the constrained resource group.
-- Use the Azure Stack template validator to identify versioning incompatibilities
+- Use the Azure Stack template validator to identify incompatibilities.
 - Update the template for Azure Stack.
 
 ### Prerequisites
@@ -21,6 +21,7 @@ Azure Stack allows you to bring the fast-paced innovations of cloud computing to
 ### Intended Audience
 This lab is intended for people who are familiar with Azure.
 
+### Modules 
 
 ### Lab Prep
 
