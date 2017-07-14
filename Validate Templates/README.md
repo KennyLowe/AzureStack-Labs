@@ -2,16 +2,25 @@
 
 ### Objective	
 
-- Configure common development tools for Azure and Azure Stack.
+- Use the Azure Stack template validator to identify versioning incompatibilities.
+
+### Copy script
+To follow the steps from this lab, run the following lines in a PowerShell session:
+
+``` PowerShell
+md c:\AzureStack_Labs\ValidateTemplates\
+Invoke-RestMethod "https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Validate%20Templates/validate.ps1" `
+-OutFile c:\AzureStack_Labs\ValidateTemplates\validate.ps1
+PowerShell_ISE –file c:\AzureStack_Labs\ValidateTemplates\validate.ps1
+```
 
 ## Task 1:  Validate templates
-In these steps, you validate a template by using the AzureRM.TemplateValidator PowerShell module.  This tool will identify common template inconsistencies that must be addressed for template portability between Azure and Azure Stack. You will use the same template that previously failed, and will see the same changes highlighted.   
+In these steps, you validate a template by using the AzureRM.TemplateValidator PowerShell module.  This tool will identify common template inconsistencies that must be addressed for template portability between Azure and Azure Stack. You will use the same template from the previous step, and will see the same changes highlighted.   
 
 1. Download the Azure Resource Manager template with this PowerShell:
 
 ```PowerShell
-    md c:\AzureStack_Labs\ValidateTemplates
-    Invoke-WebRequest -uri https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/azuredeploy.json `
+    Invoke-WebRequest -uri "https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Validate%20Templates/azuredeploy.json" `
     -OutFile c:\AzureStack_Labs\ValidateTemplates\azuredeploy.json
 ```
 
@@ -25,7 +34,7 @@ In these steps, you validate a template by using the AzureRM.TemplateValidator P
 3.  Run the template validator:
 
     ```PowerShell
-    test-azureRMTemplate -TemplatePath c:\AzureStack_Labs\ValidateTemplates\azuredeploy.json`
+    Test-AzureRMTemplate -TemplatePath c:\AzureStack_Labs\ValidateTemplates\azuredeploy.json`
     -CapabilitiesPath AzureStackCloudCapabilities_with_AddOns_20170627.json `
     -Verbose
     ```
