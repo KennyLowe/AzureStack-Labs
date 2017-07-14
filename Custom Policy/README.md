@@ -16,7 +16,7 @@ To follow the steps from this lab, run the following lines in a PowerShell sessi
 ``` PowerShell
 md c:\AzureStack_Labs\ValidateTemplates\
 Invoke-RestMethod https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/policy.ps1 ` 
--OutFile c:\temp\policy.ps1
+-OutFile c:\AzureStack_Labs\ValidateTemplates\policy.ps1
 PowerShell_ISE –file c:\AzureStack_Labs\ValidateTemplates\policy.ps1
 ```
 
