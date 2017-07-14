@@ -18,6 +18,8 @@ You'll install Visual Stode Code, and the Azure Resource Manager Tools extension
 
     ![image2](./images/image2.png)
 
+4.  Once installed, restart Visual Studio Code to activate the extension.  
+
 #### Task 2: Install PowerShell
 Azure Resource Manager PowerShell is used to manage Azure Resources.  In this step, you'll install PowerShell, and download the Azure Stack tools. 
 

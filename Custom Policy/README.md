@@ -14,9 +14,10 @@ To follow the steps from this lab, run the following lines in a PowerShell sessi
 
 
 ``` PowerShell
+md c:\AzureStack_Labs\ValidateTemplates\
 Invoke-RestMethod https://raw.githubusercontent.com/Azure/AzureStack-Labs/master/Policy/policy.ps1 ` 
 -OutFile c:\temp\policy.ps1
-PowerShell_ISE –file c:\temp\policy.ps1
+PowerShell_ISE –file c:\AzureStack_Labs\ValidateTemplates\policy.ps1
 ```
 
 > The command uses the backtick (`) in order to break a PowerShell command into multiple lines for the sake of printing. It is very important that the line break occur immediately after the tick and that there are no empty lines between the tick and the next section of the command to execute. If you are pasting this or other commands into PowerShell and getting errors, try pasting them into notepad first and cleaning up the result so that it matches the structure below, and then paste that into PowerShell.
