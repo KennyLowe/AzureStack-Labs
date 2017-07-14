@@ -56,17 +56,21 @@ For this lab a storage account is the first resource that will be added to the t
 ```
 
 Within the resources array we added a new object with an open and closing curly bracket. Within that object the common attributes (name, type, apiVersion, location and properties) are specified. The value of the properties attribute is enclosed in curly brackets, indicating that the value allows for multiple different child attributes. This template deploys a storage account configured with the type set to the Local Redundant Storage option in the East US region. 
+
 All resource types require some common attributes like "name" and "type". Azure Resource Manager uses these attributes to ensure that the correct resource provider is handling the request. The following common attributes are required across all resources.
-•	name is used to name the deployed resource. Each resource of the same resource type within a single resource group must be uniquely named. Depending on the resource type it may also require uniqueness at either subscription, tenant or global scopes.
-•	type contains the resource provider and the resource type within that resource provider.
-•	apiVersion is used to identify the API version for the resource type. Multiple API versions can exist for a single resource type. These API versions are used to identify the available properties of a resource type.
-•	location sets the region for the resource to be deployed into. This can be a region in Microsoft Azure or a region in Microsoft Azure Stack, hosted by a service provider or running in your datacenter
+
+- ```name``` is used to name the deployed resource. Each resource of the same resource type within a single resource group must be uniquely named.
+- ```type``` contains the resource provider and the resource type within that resource provider.
+- ```apiVersion``` is used to identify the API version for the resource type. Multiple API versions can exist for a single resource type. These API versions are used to identify the available properties of a resource type.
+- ```location``` sets the region for the resource to be deployed into. This can be a region in Microsoft Azure or a region in Microsoft Azure Stack, hosted by a service provider or running in your datacenter
 
 Besides these required common attributes, each different resource can have optional common attributes like tags or comments and will have properties that are resource specific. For example, a storage account requires a replication policy while a virtual network requires a subnet. Resource specific properties are configured in the properties attribute.
-•	properties contain resource specific information
 
-Adding parameters to your template
+### Adding parameters to your template
+
 Consistency of Azure Resource Manager across clouds allows the template to be used for different environments. A scaled down version of your application can be sufficient for a test environment, while a production environment requires a more robust version. Depending on the desired end state, specific options might require other settings. For the example in this whitepaper, you may want to use a different replication mechanism for the storage account when the template is deployed to a different environment. This can be achieved by specifying parameters. The values for these parameters are requested from the tenant when a template is deployed. The values for the parameters can be passed to the template deployment in different ways. 
+
+``` JSON
 "parameters": {
 	"storageAccountType": {
 		"type": "string",
@@ -78,8 +82,13 @@ Consistency of Azure Resource Manager across clouds allows the template to be us
 		]
 	}
 },
+```
+
 A parameter requires a type, but can optionally contain a default value and allowed values. The type attribute specifies the expected type of input (string, int, bool, array, object, secureString). The type can also be used to render a user interface field when deploying the template from the tenant portal. The default value is used if no value is specified by the tenant at deployment time. If a parameter does not contain a default value, the tenant is required to submit a value when deploying the template.
+
 While the parameter has been specified, the parameter is not used in the resource yet. The hard-coded value of the storage account type needs to be replaced with the parameter. The value must refer to the correct parameter in the format parameters('parameterName') enclosed by two square brackets. The square brackets allow Azure Resource Manager to identify the content as a function to be evaluated instead of a static string.
+
+``` JSON
 "resources": [
 	{
 		"name": "storageAccount",
@@ -91,13 +100,21 @@ While the parameter has been specified, the parameter is not used in the resourc
 		}
 	}
 ],
+```
+
 By adding a parameter to your template and replacing the fixed value in a resource with that parameter, the template is now more dynamic. While the concept of replacing fixed values by parameters is applicable throughout the template, just be aware of the effect that a larger number of parameters can have on the deployment experience. If a tenant is asked to submit many values for deploy a template, the experience will not be very user friendly. The deployment experience can be improved by specifying a default value where possible and minimize the number of parameters overall. Combining parameters with variables can also improve the experience while retaining the dynamic nature of a template.
-Adding variables to your template
+
+### Adding variables to your template
+
 Where parameters are used to request a value from the tenant at deployment time, a variable is a value that can be reused throughout the template without requiring user input. For example, a storage account resource can be used by a virtual machine resource to store its virtual disks. The virtual machine resource will need to reference the storage account resource name in its configuration.
 You could specify the name for the storage account as a static value for both the storage account resource and the virtual machine resource. This is problematic as the name can be potentially changed in one location and not the other. Instead, it is much easier to create a single variable that is referenced by all the relevant resources.
+
+``` JSON
 "variables": {
 	"storageAccountName": "myStorageAccountName"
 },
+```
+
 The variable can be referenced using the function: variables('variableName'). The function, just like the parameter function, is enclosed by two square brackets indicating that it should be evaluated by Azure Resource Manager accordingly.
 "resources": [
 	{
