@@ -24,11 +24,15 @@ This lab is intended for people who are familiar with Azure.
 
 ### Lab Prep
 
-#### Install Visual Studio Code
-<VS Code install steps>
+#### Install Visual Studio Code and extension
+You'll install Visual Stode Code, and the Azure Resource Manager Tools extension to work with Azure Resource Manager templates.
 
-#### Install ARM Explorer
-<ARM Explorer for VS Code install steps>
+1. Install [Visual Studio Code](https://code.visualstudio.com/Download).
+2. Once installed, select "Extensions":
+    ![image1](./media/image1.png)
+3. Search for "Azure Resource Manager Tools" and select "Install"
+
+
 #### Install PowerShell
 
 ```PowerShell
