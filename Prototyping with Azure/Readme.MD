@@ -82,7 +82,6 @@ expand-archive master.zip `
 cd AzureStack-Tools-master
 ```
 
-
 ### Download the lab files
 In the same PowerShell session, you'll download additional files required for this lab:
 
