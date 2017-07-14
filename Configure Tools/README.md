@@ -8,11 +8,6 @@
 - Windows 10 with the Azure PowerShell module installed
 - Azure subscription (Sign up for a free account here. Needs a Microsoft account)
 
-### Intended Audience
-This lab is intended for people who are familiar with Azure.
-
-### Lab Prep
-
 #### Install Visual Studio Code and extension
 You'll install Visual Stode Code, and the Azure Resource Manager Tools extension to work with Azure Resource Manager templates.
 
@@ -70,26 +65,10 @@ expand-archive master.zip `
 
 cd AzureStack-Tools-master
 ```
-
-### Download the lab files
-In the same PowerShell session, you'll download additional files required for this lab:
-
-```PowerShell
-invoke-webrequest `
-  https://github.com/Azure/AzureStack-labs/archive/master.zip `
-  -OutFile master.zip
-
-expand-archive master.zip `
-  -DestinationPath . `
-  -Force
-
-cd AzureStack-Labs-master
-
-```
  
 ## Summary
 
-In this module, you configured Visual Studio Code and PowerShell for the future modules.
+In this module, you configured Visual Studio Code and PowerShell for Azure and Azure Stack, which you will use in future modules.
 
 
 - [x] 1. [ARM Overview](/ARM%20Overview/README.md)
