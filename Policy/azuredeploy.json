@@ -28,7 +28,7 @@
       "sku": {
         "name": "[parameters('storageAccountType')]"
       },
-      "kind": "Storage"
+      "kind":"Storage"
     }],
   "outputs": {}
 }
