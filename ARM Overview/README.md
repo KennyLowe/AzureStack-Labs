@@ -27,6 +27,7 @@ You can follow along in this Lab as we build a simple template. Create a new tem
 ```
 
 An Azure Resource Manager template uses 6 top level elements. Each element has a distinct role in the template.
+
 ELEMENT	| REQUIRED | DESCRIPTION
 --- | --- | ---
 $schema | ✓ |Location of the JSON schema file that describes the version of the template language. You should use the standard URL: https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#
