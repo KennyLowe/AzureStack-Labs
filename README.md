@@ -23,10 +23,12 @@ Azure Stack allows you to bring the fast-paced innovations of cloud computing to
 
 This lab is intended for people who are familiar with Azure.
 
-### Steps
+## Labs
 
-1. [Understand Azure Resource Manager templates and versioning](/Policy/README.md)
-2. Prepare client tools.
+1. ARM overview
+2. Configure tools
+3. [Use custom policy](/Policy/README.md)
+4. Validate templates
 
 ## Contributing
 
