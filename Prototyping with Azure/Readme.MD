@@ -99,6 +99,7 @@ cd AzureStack-Labs-master
 
 ```
 ## Task 1: Explore the Azure Resource Manager template
+
 ### Sub Task 1:  Explore resource types
 <Look at storage>
 ### Sub Task 2:  Explore Azure Resource Manager versions
