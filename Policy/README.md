@@ -2,7 +2,7 @@
 
 ### Overview
 
-Azure Stack allows you to bring the fast-paced innovations of cloud computing to your on-premise environment. In this quickstart challenge, you'll be using the Azure Stack policy module to simulate an Azure Stack environment by placing resource group constraints on the full-blown Azure cloud. As a result, you can develop using all of the tools and availability of the full Azure cloud with the confidence that your investment will apply to Azure Stack as well.
+In this quickstart challenge, you'll be using the Azure Stack policy module to simulate an Azure Stack environment by placing resource group constraints on the full-blown Azure cloud. As a result, you can develop using all of the tools and availability of the full Azure cloud with the confidence that your investment will apply to Azure Stack as well.
 
 ### Objectives	
 
@@ -10,13 +10,6 @@ Azure Stack allows you to bring the fast-paced innovations of cloud computing to
 - Use the Azure Stack Policy module to constrain the resource group.
 - Test the limits of the constrained resource group.
 - Update the template for Azure Stack.
-
-### Prerequisites
-- Windows 10 with the Azure PowerShell module installed
-- Azure subscription (Sign up for a free account here. Needs a Microsoft account)
-
-### Intended Audience
-This Quick Start Challenge is intended for people who are familiar with Azure.
 
 ### Copy script
 To easily follow the steps from this lab, run the following lines in a PowerShell session to download and open the script containing all the referenced cmdlets.
