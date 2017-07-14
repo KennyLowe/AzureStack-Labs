@@ -2,6 +2,11 @@
 
 # Login to Azure
 Login-AzureRmAccount
+
+# Get Azure Subscriptions
+Get-AzureRmSubscription
+
+# Select your subscription
 $s = Select-AzureRmSubscription -SubscriptionName "[Your subscription name]"
 
 # Create a new resource group
