@@ -36,6 +36,9 @@ You'll install Visual Stode Code, and the Azure Resource Manager Tools extension
     ![image2](./images/image2.png)
 
 #### Install PowerShell
+Azure Resource Manager PowerShell is used to manage Azure Resources using a familliar language.  In this step, you'll install PowerShell, and download the Azure Stack tools. 
+
+Open an administrative PowerShell ISE session, and run the following:
 
 ```PowerShell
 # Set the module repository and the execution policy
@@ -65,7 +68,7 @@ Install-Module `
   -RequiredVersion 1.2.10 `
   -Force 
 
-# Download Azure Stack tools from GitHub and import the connect module
+# Download Azure Stack tools from GitHub
 cd \
 
 invoke-webrequest `
@@ -78,8 +81,21 @@ expand-archive master.zip `
 
 cd AzureStack-Tools-master
 ```
+
+
 ### Download lab files
-<Download files from this folder in the repo>
+In the same PowerShell session, you'll download additional files required for this lab:
+
+```PowerShell
+invoke-webrequest `
+  https://github.com/Azure/AzureStack-labs/archive/master.zip `
+  -OutFile master.zip
+
+expand-archive master.zip `
+  -DestinationPath . `
+  -Force
+
+cd AzureStack-Labs-master
 
 ## Task 1: Explore the Azure Resource Manager template
 ### Sub Task 1:  Explore resource types
