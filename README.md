@@ -25,10 +25,10 @@ This lab is intended for people who are familiar with Azure.
 
 ## Labs
 
-1. [ARM Overview](/ARM%20Overview/README.md)
-2. [Configure Tools](/Configure%20Tools/README.md)
-3. [Custom Policy](/Custom%20Policy/README.md)
-4. [Validate Templates](/Validate%20Templates/README.md)
+- [ ] 1. [ARM Overview](/ARM%20Overview/README.md)
+- [ ] 2. [Configure Tools](/Configure%20Tools/README.md)
+- [ ] 3. [Custom Policy](/Custom%20Policy/README.md)
+- [ ] 4. [Validate Templates](/Validate%20Templates/README.md)
 
 ## Contributing
 
