@@ -131,7 +131,7 @@ PowerShell_ISE –file c:\AzureStack_Labs\CustomPolicy\policy.ps1
     -OutFile $localTemplate
     ```
 
-2. Open c:\temp\azuredeploy.json in Visual Studio. Locate the line with Standard_GRS (around line 7). This setting (geo-redundant storage) is not available in Azure Stack, so the policy rejected it. Change it to "Standard_LRS" (locally-redundant storage) and save the file.
+2. Open c:\temp\azuredeploy.json in Visual Studio Code. Locate the line with Standard_GRS (around line 7). This setting (geo-redundant storage) is not available in Azure Stack, so the policy rejected it. Change it to "Standard_LRS" (locally-redundant storage) and save the file.
 
     ![subscription name](./images/changeTemplate.png)
  
